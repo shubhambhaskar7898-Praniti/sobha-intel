@@ -19,8 +19,7 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);min-height:100vh;overflow-x:hidden;font-size:14px;line-height:1.5}
-
-/* PRINT */
+ 
 @media print{
   .header,.sidebar,.composer,.no-print{display:none!important}
   .layout{display:block!important}
@@ -28,86 +27,49 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
   .report-output{display:block!important}
   .report-card{box-shadow:none!important;border:none!important}
 }
-
+ 
 /* TOAST */
-.toast{
-  position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);
-  background:var(--text);color:#fff;padding:8px 16px;border-radius:6px;
-  font-size:12px;font-weight:500;opacity:0;transition:opacity 0.18s,transform 0.18s;
-  z-index:999;pointer-events:none;white-space:nowrap
-}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(8px);background:var(--text);color:#fff;padding:8px 16px;border-radius:6px;font-size:12px;font-weight:500;opacity:0;transition:opacity 0.18s,transform 0.18s;z-index:999;pointer-events:none;white-space:nowrap}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
+ 
 /* HEADER */
-.header{
-  background:var(--white);border-bottom:1px solid var(--border);
-  padding:0 24px;height:54px;
-  display:flex;align-items:center;justify-content:space-between;
-  position:sticky;top:0;z-index:100;
-  box-shadow:0 1px 0 var(--border),0 2px 12px var(--shadow-sm)
-}
+.header{background:var(--white);border-bottom:1px solid var(--border);padding:0 24px;height:54px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 0 var(--border),0 2px 12px var(--shadow-sm)}
 .logo{display:flex;align-items:center;gap:14px}
 .logo img{height:28px;width:auto;display:block}
 .logo-divider{width:1px;height:18px;background:var(--border)}
 .logo-product{font-size:11px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted)}
 .header-right{display:flex;align-items:center;gap:8px}
-.hdr-btn{
-  display:flex;align-items:center;gap:5px;background:none;
-  border:1px solid var(--border);border-radius:6px;padding:5px 11px;
-  font-family:'Inter',sans-serif;font-size:11.5px;font-weight:500;
-  color:var(--text-muted);cursor:pointer;transition:all 0.14s
-}
+.hdr-btn{display:flex;align-items:center;gap:5px;background:none;border:1px solid var(--border);border-radius:6px;padding:5px 11px;font-family:'Inter',sans-serif;font-size:11.5px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:all 0.14s}
 .hdr-btn:hover{background:var(--maroon-tint);border-color:rgba(122,34,51,0.2);color:var(--maroon-dark)}
 .hdr-btn svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.src-status{
-  display:flex;align-items:center;gap:8px;padding:5px 12px;
-  background:var(--cream);border:1px solid var(--border);border-radius:6px;
-  font-size:11px;color:var(--text-muted)
-}
+.src-status{display:flex;align-items:center;gap:8px;padding:5px 12px;background:var(--cream);border:1px solid var(--border);border-radius:6px;font-size:11px;color:var(--text-muted)}
 .src-status-dot{width:6px;height:6px;border-radius:50%;background:var(--green);animation:blink 3s infinite}
 .src-status-label{font-weight:500}
-
+ 
 /* LAYOUT */
 .layout{display:grid;grid-template-columns:var(--sidebar-w) 1fr;min-height:calc(100vh - 54px)}
-
+ 
 /* SIDEBAR */
-.sidebar{
-  background:var(--white);border-right:1px solid var(--border);
-  display:flex;flex-direction:column;
-  position:sticky;top:54px;height:calc(100vh - 54px);overflow-y:auto
-}
+.sidebar{background:var(--white);border-right:1px solid var(--border);display:flex;flex-direction:column;position:sticky;top:54px;height:calc(100vh - 54px);overflow-y:auto}
 .sb-inner{padding:18px 0;flex:1;display:flex;flex-direction:column}
 .sb-section{padding:0 12px;margin-bottom:20px}
 .sb-label{font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-faint);margin-bottom:8px;padding:0 4px}
-.tmpl-btn{
-  display:flex;align-items:flex-start;gap:9px;width:100%;text-align:left;
-  background:none;border:1px solid transparent;border-radius:6px;
-  padding:8px 8px;margin-bottom:2px;
-  font-family:'Inter',sans-serif;cursor:pointer;transition:all 0.13s
-}
-.tmpl-btn:hover{background:var(--maroon-tint);border-color:rgba(122,34,51,0.1);}
-.tmpl-icon{
-  width:26px;height:26px;border-radius:5px;background:var(--cream-dark);
-  border:1px solid var(--border-light);
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px
-}
+.tmpl-btn{display:flex;align-items:flex-start;gap:9px;width:100%;text-align:left;background:none;border:1px solid transparent;border-radius:6px;padding:8px 8px;margin-bottom:2px;font-family:'Inter',sans-serif;cursor:pointer;transition:all 0.13s}
+.tmpl-btn:hover{background:var(--maroon-tint);border-color:rgba(122,34,51,0.1)}
+.tmpl-icon{width:26px;height:26px;border-radius:5px;background:var(--cream-dark);border:1px solid var(--border-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
 .tmpl-icon svg{width:13px;height:13px;stroke:var(--text-muted);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .tmpl-btn:hover .tmpl-icon{background:var(--maroon-pale);border-color:rgba(122,34,51,0.15)}
 .tmpl-btn:hover .tmpl-icon svg{stroke:var(--maroon)}
 .tmpl-name{font-size:11.5px;font-weight:500;color:var(--text-mid);line-height:1.3;margin-bottom:1px}
 .tmpl-desc{font-size:10.5px;color:var(--text-muted);line-height:1.4;font-weight:300}
 .sb-divider{height:1px;background:var(--border-light);margin:4px 12px 16px}
-
+ 
 /* HISTORY */
 .hist-hd{display:flex;align-items:center;justify-content:space-between;padding:0 16px;margin-bottom:8px}
 .hist-clear{font-size:10px;font-weight:500;color:var(--text-faint);background:none;border:none;cursor:pointer;font-family:'Inter',sans-serif;transition:color 0.13s;text-decoration:underline;text-underline-offset:2px}
 .hist-clear:hover{color:var(--maroon)}
 .hist-list{padding:0 12px;flex:1;overflow-y:auto}
-.hist-item{
-  display:flex;align-items:flex-start;gap:5px;
-  padding:7px 8px;border-radius:6px;margin-bottom:2px;
-  border:1px solid transparent;transition:all 0.12s
-}
+.hist-item{display:flex;align-items:flex-start;gap:5px;padding:7px 8px;border-radius:6px;margin-bottom:2px;border:1px solid transparent;transition:all 0.12s}
 .hist-item:hover{background:var(--cream);border-color:var(--border-light)}
 .hist-item.active{background:var(--maroon-pale);border-color:rgba(122,34,51,0.12)}
 .hi-body{flex:1;min-width:0;cursor:pointer}
@@ -117,42 +79,19 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
 .hist-item:hover .hi-del{color:var(--text-faint)}
 .hi-del:hover{color:var(--maroon)!important;background:rgba(122,34,51,0.07)}
 .no-hist{padding:20px 8px;color:var(--text-faint);font-size:11px;line-height:1.6;text-align:center}
-
+ 
 /* MAIN */
 .main{display:flex;flex-direction:column;padding:24px 32px 52px;width:100%;min-width:0}
-
+ 
 /* COMPOSER */
-.composer{
-  background:var(--white);border:1px solid var(--border);border-radius:10px;
-  padding:0;box-shadow:0 1px 8px var(--shadow-sm);
-  margin-bottom:20px;overflow:hidden;
-  transition:box-shadow 0.18s,border-color 0.18s
-}
+.composer{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:0;box-shadow:0 1px 8px var(--shadow-sm);margin-bottom:20px;overflow:hidden;transition:box-shadow 0.18s,border-color 0.18s}
 .composer:focus-within{box-shadow:0 2px 16px var(--shadow-md);border-color:rgba(122,34,51,0.2)}
 .composer-body{padding:14px 16px 0}
 .composer-label{font-size:10px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--maroon);margin-bottom:8px}
-.query-ta{
-  width:100%;border:none;outline:none;
-  background:transparent;
-  font-family:'Inter',sans-serif;
-  font-size:14px;color:var(--text);
-  resize:none;line-height:1.6;min-height:56px;max-height:180px;
-  overflow-y:hidden
-}
+.query-ta{width:100%;border:none;outline:none;background:transparent;font-family:'Inter',sans-serif;font-size:14px;color:var(--text);resize:none;line-height:1.6;min-height:56px;max-height:180px;overflow-y:hidden}
 .query-ta::placeholder{color:var(--text-faint);font-style:normal}
-.composer-filters{
-  display:flex;gap:6px;padding:10px 16px;
-  border-top:1px solid var(--border-light);flex-wrap:wrap;align-items:center
-}
-.filter-select{
-  appearance:none;background:var(--cream);border:1px solid var(--border);
-  border-radius:5px;padding:4px 22px 4px 8px;
-  font-family:'Inter',sans-serif;font-size:11px;font-weight:500;color:var(--text-mid);
-  cursor:pointer;transition:all 0.13s;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%238a7a6e' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;background-position:right 6px center;
-  outline:none
-}
+.composer-filters{display:flex;gap:6px;padding:10px 16px;border-top:1px solid var(--border-light);flex-wrap:wrap;align-items:center}
+.filter-select{appearance:none;background:var(--cream);border:1px solid var(--border);border-radius:5px;padding:4px 22px 4px 8px;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;color:var(--text-mid);cursor:pointer;transition:all 0.13s;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%238a7a6e' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 6px center;outline:none}
 .filter-select:focus{border-color:rgba(122,34,51,0.3);background-color:var(--white)}
 .filter-divider{width:1px;height:20px;background:var(--border-light);margin:0 2px}
 .composer-footer{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-top:1px solid var(--border-light)}
@@ -161,169 +100,97 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
 .composer-footer-right{display:flex;align-items:center;gap:8px}
 .kb-hint{font-size:10px;color:var(--text-faint)}
 .kb-hint kbd{background:var(--cream-dark);border:1px solid var(--border);border-radius:3px;padding:1px 4px;font-size:9px;font-family:inherit}
-.run-btn{
-  background:var(--maroon);color:#fff;border:none;border-radius:7px;
-  padding:8px 20px;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;
-  cursor:pointer;display:flex;align-items:center;gap:6px;
-  transition:background 0.14s,transform 0.12s;letter-spacing:0.2px;white-space:nowrap
-}
+.run-btn{background:var(--maroon);color:#fff;border:none;border-radius:7px;padding:8px 20px;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;transition:background 0.14s,transform 0.12s;letter-spacing:0.2px;white-space:nowrap}
 .run-btn:hover:not(:disabled){background:var(--maroon-dark);transform:translateY(-1px)}
 .run-btn:active:not(:disabled){transform:translateY(0)}
 .run-btn:disabled{background:var(--cream-mid);color:var(--text-faint);cursor:not-allowed}
 .run-btn svg{width:13px;height:13px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.15s}
 .run-btn:hover:not(:disabled) svg{transform:translateX(2px)}
-
+ 
 /* LOADING */
-.loading-state{
-  display:none;background:var(--white);border:1px solid var(--border);
-  border-radius:10px;padding:36px 28px;text-align:center;
-  box-shadow:0 1px 8px var(--shadow-sm);margin-bottom:20px
-}
+.loading-state{display:none;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:36px 28px;text-align:center;box-shadow:0 1px 8px var(--shadow-sm);margin-bottom:20px}
 .loading-state.visible{display:block;animation:fadeUp 0.25s ease both}
-.loading-ring{
-  width:36px;height:36px;margin:0 auto 14px;border-radius:50%;
-  border:2.5px solid var(--cream-mid);border-top-color:var(--maroon);
-  animation:spin 0.8s linear infinite
-}
+.loading-ring{width:36px;height:36px;margin:0 auto 14px;border-radius:50%;border:2.5px solid var(--cream-mid);border-top-color:var(--maroon);animation:spin 0.8s linear infinite}
 .loading-title{font-size:15px;font-weight:500;color:var(--text);margin-bottom:14px}
-.loading-steps{display:flex;flex-direction:column;gap:5px;max-width:220px;margin:0 auto}
+.loading-steps{display:flex;flex-direction:column;gap:5px;max-width:240px;margin:0 auto}
 .l-step{display:flex;align-items:center;gap:8px;font-size:11.5px;color:var(--text-muted);opacity:0.3;transition:opacity 0.3s,color 0.3s;text-align:left}
 .l-dot{width:5px;height:5px;border-radius:50%;background:var(--border);flex-shrink:0;transition:background 0.3s}
 .l-step.active{opacity:1;color:var(--maroon)}
 .l-step.active .l-dot{background:var(--maroon)}
 .l-step.done{opacity:0.6;color:var(--text-mid)}
 .l-step.done .l-dot{background:var(--green)}
-
-/* ERROR STATE */
-.error-state{
-  display:none;background:var(--white);border:1px solid var(--border);
-  border-radius:10px;padding:32px 28px;text-align:center;
-  box-shadow:0 1px 8px var(--shadow-sm);margin-bottom:20px
-}
+ 
+/* ERROR */
+.error-state{display:none;background:var(--white);border:1px solid var(--border);border-radius:10px;padding:32px 28px;text-align:center;box-shadow:0 1px 8px var(--shadow-sm);margin-bottom:20px}
 .error-state.visible{display:block;animation:fadeUp 0.25s ease both}
 .error-icon{width:36px;height:36px;border-radius:50%;background:#fef2f2;border:1px solid #fecaca;display:flex;align-items:center;justify-content:center;margin:0 auto 12px}
 .error-icon svg{width:16px;height:16px;stroke:#dc2626;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .error-title{font-size:14px;font-weight:600;color:var(--text);margin-bottom:6px}
 .error-msg{font-size:12.5px;color:var(--text-muted);line-height:1.6;margin-bottom:16px;max-width:340px;margin-left:auto;margin-right:auto}
-.error-retry{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--maroon);color:#fff;border:none;border-radius:6px;
-  padding:8px 18px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;
-  cursor:pointer;transition:background 0.13s
-}
+.error-retry{display:inline-flex;align-items:center;gap:6px;background:var(--maroon);color:#fff;border:none;border-radius:6px;padding:8px 18px;font-family:'Inter',sans-serif;font-size:12px;font-weight:500;cursor:pointer;transition:background 0.13s}
 .error-retry:hover{background:var(--maroon-dark)}
-
+ 
 /* WELCOME */
 .welcome-state{padding:32px 24px 28px;animation:fadeUp 0.35s ease both}
-.welcome-eyebrow{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--maroon-pale);color:var(--maroon);
-  border:1px solid rgba(122,34,51,0.15);
-  border-radius:20px;padding:4px 12px;margin-bottom:18px;
-  font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase
-}
-.welcome-title{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:8px}
-.welcome-sub{font-size:13px;color:var(--text-muted);line-height:1.7;max-width:380px;margin:0 auto 10px;font-weight:300}
-.welcome-for{font-size:11px;color:var(--text-faint);margin-bottom:28px;letter-spacing:0.3px}
-.welcome-for span{color:var(--text-mid);font-weight:500}
-.tmpl-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:500px;margin:0 auto}
-.tmpl-card{
-  background:var(--white);border:1px solid var(--border);border-radius:8px;
-  padding:12px 14px;cursor:pointer;transition:all 0.14s;text-align:left
-}
-.tmpl-card:hover{border-color:rgba(122,34,51,0.22);background:var(--maroon-tint)}
-.tc-cat{font-size:9.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--maroon);margin-bottom:4px}
-.tc-text{font-size:12px;color:var(--text-mid);line-height:1.45;font-weight:300}
-
+ 
+/* NEWS FEED */
+.news-item{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:11px 14px;cursor:pointer;transition:all 0.14s;display:flex;align-items:flex-start;gap:10px}
+.news-item:hover{border-color:rgba(122,34,51,0.2);background:var(--maroon-tint)}
+.news-item:hover .news-headline{color:var(--maroon-dark)}
+.news-source-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
+.news-body{flex:1;min-width:0}
+.news-headline{font-size:12.5px;font-weight:500;color:var(--text-mid);line-height:1.45;margin-bottom:3px}
+.news-meta{font-size:10px;color:var(--text-faint);display:flex;gap:8px}
+.news-skeleton{background:linear-gradient(90deg,var(--cream-dark) 25%,var(--cream-mid) 50%,var(--cream-dark) 75%);background-size:200% 100%;animation:shimmer 1.4s infinite;border-radius:8px;height:54px;margin-bottom:7px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+ 
 /* REPORT */
 .report-output{display:none}
 .report-output.visible{display:block;animation:fadeUp 0.3s ease both}
-
-/* Report layout: main + right rail */
 .report-layout{display:grid;grid-template-columns:1fr 280px;gap:16px;align-items:start}
-
-/* Report card */
-.report-card{
-  background:var(--white);border:1px solid var(--border);
-  border-radius:10px;overflow:hidden;
-  box-shadow:0 1px 10px var(--shadow-sm)
-}
-.rpt-hd{
-  padding:20px 24px 16px;border-bottom:1px solid var(--border-light)
-}
+.report-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 1px 10px var(--shadow-sm)}
+.rpt-hd{padding:20px 24px 16px;border-bottom:1px solid var(--border-light)}
 .rpt-eyebrow{font-size:9.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--maroon);margin-bottom:5px}
 .rpt-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:4px}
 .rpt-meta{font-size:11px;color:var(--text-faint);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .rpt-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
-
-/* Executive summary */
-.exec-summary{
-  margin:20px 24px;padding:14px 16px;
-  background:var(--maroon-tint);border:1px solid rgba(122,34,51,0.1);
-  border-left:3px solid var(--maroon);border-radius:0 7px 7px 0
-}
+.exec-summary{margin:20px 24px;padding:14px 16px;background:var(--maroon-tint);border:1px solid rgba(122,34,51,0.1);border-left:3px solid var(--maroon);border-radius:0 7px 7px 0}
 .exec-label{font-size:9.5px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--maroon);margin-bottom:6px}
 .exec-text{font-size:13px;color:var(--text-mid);line-height:1.75;font-weight:300}
-
-/* Sections */
 .rpt-sec{padding:20px 24px;border-top:1px solid var(--border-light)}
 .rpt-sec-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
 .rpt-sec-title{font-size:10px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--text-muted)}
-
-/* Findings */
 .findings-list{list-style:none;display:flex;flex-direction:column;gap:6px}
 .findings-list li{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;background:var(--cream);border-radius:7px;border:1px solid var(--border-light)}
 .findings-list li.primary{background:var(--maroon-tint);border-color:rgba(122,34,51,0.12)}
-.fi-rank{
-  width:20px;height:20px;border-radius:4px;background:var(--cream-mid);
-  display:flex;align-items:center;justify-content:center;
-  font-size:10px;font-weight:600;color:var(--text-muted);flex-shrink:0;margin-top:1px
-}
+.fi-rank{width:20px;height:20px;border-radius:4px;background:var(--cream-mid);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;color:var(--text-muted);flex-shrink:0;margin-top:1px}
 .findings-list li.primary .fi-rank{background:var(--maroon-pale);color:var(--maroon)}
 .fi-body{flex:1}
 .fi-text{font-size:13px;color:var(--text-mid);line-height:1.7;font-weight:300;word-break:break-word}
 .fi-source{font-size:10.5px;color:var(--text-faint);margin-top:4px;display:flex;align-items:center;gap:5px}
 .fi-src-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-
-/* Strategic interpretation */
-.interp-box{
-  background:var(--cream);border:1px solid var(--border-light);border-radius:7px;
-  padding:14px 16px
-}
+.interp-box{background:var(--cream);border:1px solid var(--border-light);border-radius:7px;padding:14px 16px}
 .interp-box p{font-size:13px;color:var(--text-mid);line-height:1.75;font-weight:300}
-
-/* Implications grid */
 .impl-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .impl-cell{background:var(--cream);border:1px solid var(--border-light);border-radius:7px;padding:12px 14px}
 .impl-cell-label{font-size:9.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-faint);margin-bottom:5px}
 .impl-cell-text{font-size:12.5px;color:var(--text-mid);line-height:1.65;font-weight:300}
-
-/* Market data */
 .data-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .data-cell{background:var(--cream);border:1px solid var(--border-light);border-radius:7px;padding:13px 12px}
 .dc-label{font-size:9.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-faint);margin-bottom:6px;line-height:1.3}
 .dc-value{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--maroon-dark);line-height:1}
 .data-empty{grid-column:1/-1;text-align:center;padding:16px;font-size:12px;color:var(--text-faint);font-weight:300}
-
-/* Next questions */
 .next-q-list{display:flex;flex-direction:column;gap:5px}
-.next-q-item{
-  display:flex;align-items:center;gap:8px;padding:8px 10px;
-  background:none;border:1px solid var(--border-light);border-radius:6px;
-  font-family:'Inter',sans-serif;font-size:12px;font-weight:400;color:var(--text-mid);
-  cursor:pointer;transition:all 0.13s;text-align:left;width:100%
-}
+.next-q-item{display:flex;align-items:center;gap:8px;padding:8px 10px;background:none;border:1px solid var(--border-light);border-radius:6px;font-family:'Inter',sans-serif;font-size:12px;font-weight:400;color:var(--text-mid);cursor:pointer;transition:all 0.13s;text-align:left;width:100%}
 .next-q-item:hover{background:var(--maroon-tint);border-color:rgba(122,34,51,0.15);color:var(--maroon-dark)}
 .next-q-item svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;color:var(--text-faint)}
-
+ 
 /* RIGHT RAIL */
 .right-rail{display:flex;flex-direction:column;gap:12px}
 .rail-card{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden;box-shadow:0 1px 6px var(--shadow-sm)}
 .rail-hd{padding:12px 16px;border-bottom:1px solid var(--border-light);display:flex;align-items:center;justify-content:space-between}
 .rail-title{font-size:10px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:var(--text-muted)}
 .rail-body{padding:14px 16px}
-
-/* Source chips in rail */
 .src-chips{display:flex;flex-direction:column;gap:5px}
 .src-chip{display:flex;align-items:center;gap:7px;padding:5px 0;border-bottom:1px solid var(--border-light)}
 .src-chip:last-child{border-bottom:none}
@@ -332,95 +199,36 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
 .sc-dot.press{background:var(--amber)}
 .sc-dot.portal{background:var(--blue)}
 .sc-dot.research{background:var(--purple)}
-.sc-dot.unverified{background:#aaa}
-.sc-name{font-size:11.5px;color:var(--text-mid);font-weight:400;flex:1}
-.sc-type{font-size:9.5px;color:var(--text-faint);text-transform:uppercase;letter-spacing:0.8px;font-weight:500}
-
-/* Legend */
+.sc-dot.web{background:var(--text-faint)}
+.sc-name{font-size:11.5px;color:var(--text-mid);font-weight:400;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .src-legend{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border-light)}
 .leg-row{display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--text-muted)}
 .leg-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-
-/* Methodology drawer */
-.meth-toggle{
-  display:flex;align-items:center;gap:6px;width:100%;
-  background:none;border:none;font-family:'Inter',sans-serif;
-  font-size:11px;font-weight:500;color:var(--text-muted);
-  cursor:pointer;padding:0;transition:color 0.13s
-}
+.meth-toggle{display:flex;align-items:center;gap:6px;width:100%;background:none;border:none;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;color:var(--text-muted);cursor:pointer;padding:0;transition:color 0.13s}
 .meth-toggle:hover{color:var(--maroon)}
 .meth-toggle svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform 0.2s}
 .meth-toggle.open svg{transform:rotate(180deg)}
 .meth-content{overflow:hidden;max-height:0;transition:max-height 0.3s ease}
-.meth-content.open{max-height:400px}
+.meth-content.open{max-height:500px}
 .meth-body{padding-top:10px;font-size:11px;color:var(--text-muted);line-height:1.7}
 .meth-body p{margin-bottom:6px}
 .meth-body strong{color:var(--text-mid);font-weight:500}
-
-/* Report actions */
-.rpt-actions{display:flex;gap:6px;flex-wrap:wrap}
-.act-btn{
-  display:flex;align-items:center;gap:5px;
-  background:var(--cream);border:1px solid var(--border);border-radius:6px;
-  padding:6px 12px;font-family:'Inter',sans-serif;
-  font-size:11px;font-weight:500;color:var(--text-mid);
-  cursor:pointer;transition:all 0.13s
-}
+.act-btn{display:flex;align-items:center;gap:5px;background:var(--cream);border:1px solid var(--border);border-radius:6px;padding:6px 12px;font-family:'Inter',sans-serif;font-size:11px;font-weight:500;color:var(--text-mid);cursor:pointer;transition:all 0.13s}
 .act-btn:hover{background:var(--maroon-pale);border-color:rgba(122,34,51,0.18);color:var(--maroon-dark)}
 .act-btn svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-
-/* Unverified */
-.unverified-flag{
-  display:none;align-items:center;gap:6px;margin-top:10px;
-  background:#fffbeb;border:1px solid #fde68a;border-radius:5px;
-  padding:5px 10px;font-size:11px;color:#78580e;font-weight:500
-}
-
-/* NEWS FEED */
-.news-item{
-  background:var(--white);border:1px solid var(--border-light);border-radius:8px;
-  padding:11px 14px;cursor:pointer;transition:all 0.14s;
-  display:flex;align-items:flex-start;gap:10px
-}
-.news-item:hover{border-color:rgba(122,34,51,0.2);background:var(--maroon-tint)}
-.news-item:hover .news-headline{color:var(--maroon-dark)}
-.news-source-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;margin-top:5px}
-.news-body{flex:1;min-width:0}
-.news-headline{font-size:12.5px;font-weight:500;color:var(--text-mid);line-height:1.45;margin-bottom:3px}
-.news-meta{font-size:10px;color:var(--text-faint);display:flex;gap:8px}
-.news-skeleton{
-  background:linear-gradient(90deg,var(--cream-dark) 25%,var(--cream-mid) 50%,var(--cream-dark) 75%);
-  background-size:200% 100%;
-  animation:shimmer 1.4s infinite;
-  border-radius:8px;height:54px
-}
-@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
-
-
+.unverified-flag{display:none;align-items:center;gap:6px;margin-top:10px;background:#fffbeb;border:1px solid #fde68a;border-radius:5px;padding:5px 10px;font-size:11px;color:#78580e;font-weight:500}
+ 
 @keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0.4}}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .report-layout{grid-template-columns:1fr}
-  .right-rail{order:-1}
-}
-@media(max-width:768px){
-  .layout{grid-template-columns:1fr}
-  .sidebar{display:none}
-  .main{padding:16px 14px 40px}
-  .data-row{grid-template-columns:1fr 1fr}
-  .impl-grid{grid-template-columns:1fr}
-  .tmpl-grid{grid-template-columns:1fr}
-  .header{padding:0 14px}
-  .src-status{display:none}
-}
+ 
+@media(max-width:900px){.report-layout{grid-template-columns:1fr}.right-rail{order:-1}}
+@media(max-width:768px){.layout{grid-template-columns:1fr}.sidebar{display:none}.main{padding:16px 14px 40px}.data-row{grid-template-columns:1fr 1fr}.impl-grid{grid-template-columns:1fr}.header{padding:0 14px}.src-status{display:none}}
 </style>
 </head>
 <body>
 <div class="toast" id="toast"></div>
-
+ 
 <!-- HEADER -->
 <div class="header">
   <div class="logo">
@@ -443,49 +251,40 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
     </button>
   </div>
 </div>
-
+ 
 <!-- LAYOUT -->
 <div class="layout">
-
   <!-- SIDEBAR -->
   <div class="sidebar">
     <div class="sb-inner">
       <div class="sb-section">
         <div class="sb-label">Templates</div>
-
-        <button class="tmpl-btn" onclick="useTemplate('competitor')" data-q="What has Emaar launched in the past 60 days? Summarise the projects, pricing, locations and target segments.">
+        <button class="tmpl-btn" onclick="useTemplate('competitor')">
           <div class="tmpl-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div>
           <div><div class="tmpl-name">Competitor Watch</div><div class="tmpl-desc">Recent launches &amp; activity</div></div>
         </button>
-
-        <button class="tmpl-btn" onclick="useTemplate('pricing')" data-q="What is the current price per sqft trend for luxury villas in Dubai Hills Estate and Sobha Hartland? Include YoY movement and recent transaction data.">
+        <button class="tmpl-btn" onclick="useTemplate('pricing')">
           <div class="tmpl-icon"><svg viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></div>
           <div><div class="tmpl-name">Pricing Benchmark</div><div class="tmpl-desc">Price per sqft &amp; trends</div></div>
         </button>
-
-        <button class="tmpl-btn" onclick="useTemplate('community')" data-q="Give me a market snapshot of Mohammed Bin Rashid City — active developers, pricing, sales velocity, and what is selling best right now.">
+        <button class="tmpl-btn" onclick="useTemplate('community')">
           <div class="tmpl-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
           <div><div class="tmpl-name">Community Snapshot</div><div class="tmpl-desc">Area-level market view</div></div>
         </button>
-
-        <button class="tmpl-btn" onclick="useTemplate('benchmark')" data-q="Compare Sobha Realty vs Damac Properties — positioning, quality perception, recent sales performance, pricing strategy and launch pipeline.">
+        <button class="tmpl-btn" onclick="useTemplate('benchmark')">
           <div class="tmpl-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <div><div class="tmpl-name">Strategic Benchmark</div><div class="tmpl-desc">Sobha vs competitor</div></div>
         </button>
-
-        <button class="tmpl-btn" onclick="useTemplate('offplan')" data-q="What are the top off-plan projects by sales volume in Dubai this quarter? Include developer, community, pricing, and absorption rate.">
+        <button class="tmpl-btn" onclick="useTemplate('offplan')">
           <div class="tmpl-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
           <div><div class="tmpl-name">Off-Plan Tracker</div><div class="tmpl-desc">Top projects by volume</div></div>
         </button>
-
-        <button class="tmpl-btn" onclick="useTemplate('briefing')" data-q="Produce a senior leadership briefing on the current Dubai real estate market — key trends, risks, competitor moves, and implications for a premium developer.">
-          <div class="tmpl-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <button class="tmpl-btn" onclick="useTemplate('briefing')">
+          <div class="tmpl-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
           <div><div class="tmpl-name">Leadership Briefing</div><div class="tmpl-desc">Executive market summary</div></div>
         </button>
       </div>
-
       <div class="sb-divider"></div>
-
       <div class="hist-hd">
         <div class="sb-label" style="margin-bottom:0">History</div>
         <button class="hist-clear" id="clearAllBtn" style="display:none" onclick="clearAll()">Clear all</button>
@@ -495,19 +294,18 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
       </div>
     </div>
   </div>
-
+ 
   <!-- MAIN -->
   <div class="main">
-
+ 
     <!-- Composer -->
     <div class="composer" id="composer">
       <div class="composer-body">
         <div class="composer-label">Research Query</div>
-        <textarea class="query-ta" id="queryInput" rows="2"
-          placeholder="Ask anything — competitor launches, pricing trends, community snapshots, benchmarks, leadership briefings…"></textarea>
+        <textarea class="query-ta" id="queryInput" rows="2" placeholder="Ask anything — competitor launches, pricing trends, community snapshots, benchmarks, leadership briefings…"></textarea>
       </div>
       <div class="composer-filters">
-        <select class="filter-select" id="fPeriod" title="Time period">
+        <select class="filter-select" id="fPeriod">
           <option value="">All time</option>
           <option value="30">Last 30 days</option>
           <option value="60">Last 60 days</option>
@@ -515,11 +313,11 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
           <option value="quarter">This quarter</option>
           <option value="year">This year</option>
         </select>
-        <select class="filter-select" id="fGeo" title="Geography">
+        <select class="filter-select" id="fGeo">
           <option value="Dubai">Dubai</option>
           <option value="Abu Dhabi">Abu Dhabi</option>
         </select>
-        <select class="filter-select" id="fAsset" title="Asset type">
+        <select class="filter-select" id="fAsset">
           <option value="">All types</option>
           <option value="apartments">Apartments</option>
           <option value="villas">Villas</option>
@@ -527,7 +325,7 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
           <option value="ready">Ready</option>
         </select>
         <div class="filter-divider"></div>
-        <select class="filter-select" id="fMode" title="Output mode">
+        <select class="filter-select" id="fMode">
           <option value="report">Detailed report</option>
           <option value="summary">Executive summary</option>
           <option value="briefing">Briefing note</option>
@@ -545,11 +343,11 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
         </div>
       </div>
     </div>
-
+ 
     <!-- Loading -->
     <div class="loading-state" id="loadingState">
       <div class="loading-ring"></div>
-      <div class="loading-title" id="loadingTitle">Searching sources…</div>
+      <div class="loading-title">Researching your query…</div>
       <div class="loading-steps">
         <div class="l-step" id="ls1"><span class="l-dot"></span>Searching approved sources</div>
         <div class="l-step" id="ls2"><span class="l-dot"></span>Reading and validating findings</div>
@@ -557,7 +355,7 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
         <div class="l-step" id="ls4"><span class="l-dot"></span>Formatting report</div>
       </div>
     </div>
-
+ 
     <!-- Error -->
     <div class="error-state" id="errorState">
       <div class="error-icon">
@@ -570,21 +368,15 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
         Try again
       </button>
     </div>
-
+ 
     <!-- Welcome -->
     <div class="welcome-state" id="welcomeState">
-
-      <!-- Header block -->
       <div style="text-align:left;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--border-light)">
         <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--maroon);margin-bottom:10px">Sobha Realty · Internal Platform</div>
         <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:600;color:var(--text);line-height:1.2;margin-bottom:8px">Market Intelligence<br/>for Strategic Decisions</div>
         <div style="font-size:13px;color:var(--text-muted);line-height:1.7;max-width:520px;font-weight:300">Real-time research across 12 approved sources — government data, UAE business press, property portals, and analyst reports. Use the query composer above or select a research template from the left panel.</div>
       </div>
-
-      <!-- Two column: stats + news -->
       <div style="display:grid;grid-template-columns:200px 1fr;gap:20px;text-align:left">
-
-        <!-- Left: quick stats -->
         <div style="display:flex;flex-direction:column;gap:10px">
           <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-faint);margin-bottom:2px">Platform</div>
           <div style="background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:12px 14px">
@@ -603,18 +395,15 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
             <div style="font-size:11px;color:var(--text-muted);margin-top:2px">Real-time search</div>
           </div>
         </div>
-
-        <!-- Right: live news feed -->
         <div>
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">
             <div style="font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--text-faint)">Today's Market Headlines</div>
             <div style="display:flex;align-items:center;gap:5px;font-size:10px;color:var(--text-faint)">
-              <span id="newsDot" style="width:5px;height:5px;border-radius:50%;background:var(--green);display:inline-block"></span>
+              <span id="newsDot" style="width:5px;height:5px;border-radius:50%;background:var(--amber);display:inline-block"></span>
               <span id="newsStatus">Loading…</span>
             </div>
           </div>
-          <div id="newsFeed" style="display:flex;flex-direction:column;gap:7px">
-            <!-- Skeleton loaders -->
+          <div id="newsFeed">
             <div class="news-skeleton"></div>
             <div class="news-skeleton"></div>
             <div class="news-skeleton"></div>
@@ -622,15 +411,12 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
             <div class="news-skeleton"></div>
           </div>
         </div>
-
       </div>
     </div>
-
+ 
     <!-- Report -->
     <div class="report-output" id="reportOutput">
       <div class="report-layout">
-
-        <!-- Main report -->
         <div class="report-card">
           <div class="rpt-hd">
             <div class="rpt-eyebrow">Sobha Realty · Market Intelligence</div>
@@ -643,50 +429,34 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
               <span id="rptMode">—</span>
             </div>
           </div>
-
-          <!-- Executive Summary -->
-          <div class="exec-summary" id="execSummaryWrap">
+          <div class="exec-summary">
             <div class="exec-label">Executive Summary</div>
             <div class="exec-text" id="execSummary">—</div>
           </div>
-
-          <!-- Key Findings -->
           <div class="rpt-sec">
-            <div class="rpt-sec-hd">
-              <div class="rpt-sec-title">Key Findings</div>
-            </div>
+            <div class="rpt-sec-hd"><div class="rpt-sec-title">Key Findings</div></div>
             <ul class="findings-list" id="findingsList"></ul>
           </div>
-
-          <!-- Strategic Interpretation -->
           <div class="rpt-sec" id="interpSec">
             <div class="rpt-sec-hd"><div class="rpt-sec-title">What This Means</div></div>
             <div class="interp-box"><p id="interpText">—</p></div>
           </div>
-
-          <!-- Implications for Sobha -->
           <div class="rpt-sec">
             <div class="rpt-sec-hd"><div class="rpt-sec-title">Implications for Sobha</div></div>
             <div class="impl-grid" id="implGrid"></div>
           </div>
-
-          <!-- Market Data -->
           <div class="rpt-sec">
             <div class="rpt-sec-hd"><div class="rpt-sec-title">Supporting Data</div></div>
             <div class="data-row" id="dataRow"></div>
           </div>
-
-          <!-- Next Questions -->
           <div class="rpt-sec" id="nextSec">
             <div class="rpt-sec-hd"><div class="rpt-sec-title">Suggested Next Questions</div></div>
             <div class="next-q-list" id="nextQList"></div>
           </div>
         </div>
-
+ 
         <!-- Right rail -->
         <div class="right-rail no-print">
-
-          <!-- Actions -->
           <div class="rail-card">
             <div class="rail-hd"><div class="rail-title">Export</div></div>
             <div class="rail-body" style="display:flex;flex-direction:column;gap:6px">
@@ -694,14 +464,12 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
                 <svg viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
                 Copy as text
               </button>
-              <button class="act-btn" onclick="exportPDF()" style="width:100%;justify-content:center">
-                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <button class="act-btn" onclick="window.print()" style="width:100%;justify-content:center">
+                <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
                 Export PDF
               </button>
             </div>
           </div>
-
-          <!-- Sources -->
           <div class="rail-card">
             <div class="rail-hd"><div class="rail-title">Sources Referenced</div></div>
             <div class="rail-body">
@@ -715,9 +483,7 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
               <div id="unverifiedFlag" class="unverified-flag">⚠ Data outside approved sources — flagged</div>
             </div>
           </div>
-
-          <!-- Methodology -->
-          <div class="rail-card" id="methCard">
+          <div class="rail-card">
             <div class="rail-hd">
               <div class="rail-title">Methodology</div>
               <button class="meth-toggle" id="methToggle" onclick="toggleMeth()">
@@ -727,80 +493,76 @@ body{background:var(--cream);font-family:'Inter',sans-serif;color:var(--text);mi
             <div class="rail-body">
               <div class="meth-content" id="methContent">
                 <div class="meth-body">
-                  <p><strong>Approved sources</strong> are searched first: DLD, Dubai REST, Dubai Pulse (government), Gulf News, Khaleej Times, The National (press), Bayut, Property Finder, DXB Interact (portals), Propsearch, fäm Properties, Global Property Guide (research).</p>
-                  <p><strong>Source ranking:</strong> Government data is treated as highest authority. Press and research sources are used for context and trend analysis.</p>
-                  <p><strong>Fallback:</strong> If approved sources have insufficient data, the best available public source is used and flagged as unverified.</p>
-                  <p><strong>Freshness:</strong> All data points include the period or date they refer to. The agent does not present historical data as current.</p>
-                  <p><strong>Confidence:</strong> Findings cross-verified across multiple sources are treated as confirmed. Single-source findings are presented as reported.</p>
+                  <p><strong>Approved sources</strong> are prioritised: DLD, Dubai REST, Dubai Pulse (government), Gulf News, Khaleej Times, The National (press), Bayut, Property Finder, DXB Interact (portals), Propsearch, fäm Properties, Global Property Guide (research).</p>
+                  <p><strong>Search:</strong> Google Search grounding is used to fetch live data from approved sources first, then broader web if needed.</p>
+                  <p><strong>Anti-hallucination:</strong> No numbers are invented. Every figure includes its source and time period. Unverified data is flagged.</p>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
-
+ 
   </div>
 </div>
-
-<!-- METHODOLOGY MODAL (from header button) -->
+ 
+<!-- METHODOLOGY MODAL -->
 <div id="methModal" style="display:none;position:fixed;inset:0;background:rgba(26,16,8,0.5);z-index:200;align-items:center;justify-content:center;backdrop-filter:blur(2px)">
   <div style="background:var(--white);border-radius:12px;padding:32px;max-width:480px;width:90%;max-height:80vh;overflow-y:auto;box-shadow:0 20px 50px rgba(26,16,8,0.2)">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px">
       <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--text)">Methodology &amp; Sources</div>
-      <button onclick="document.getElementById('methModal').style.display='none'" style="background:none;border:none;font-size:18px;color:var(--text-muted);cursor:pointer;line-height:1">×</button>
+      <button onclick="document.getElementById('methModal').style.display='none'" style="background:none;border:none;font-size:18px;color:var(--text-muted);cursor:pointer">×</button>
     </div>
     <div class="meth-body" style="font-size:12.5px">
-      <p><strong>Approved sources</strong> are searched first and prioritised:</p>
       <p>🟢 <strong>Government (Tier 1):</strong> Dubai Land Department, Dubai REST, Dubai Pulse</p>
       <p>🟡 <strong>Press (Tier 2):</strong> Gulf News Property, Khaleej Times, The National</p>
       <p>🔵 <strong>Portals (Tier 3):</strong> Bayut, Property Finder, DXB Interact</p>
       <p>🟣 <strong>Research (Tier 4):</strong> Propsearch.ae, fäm Properties, Global Property Guide</p>
-      <p><strong>Fallback:</strong> If no approved source has sufficient data, the best available public source is used and flagged as unverified.</p>
-      <p><strong>Anti-hallucination:</strong> The agent never invents numbers. Any figure that cannot be sourced is omitted entirely. Every metric includes its source and time period.</p>
-      <p><strong>Confidence levels:</strong> Cross-verified findings (2+ sources) are treated as confirmed. Single-source findings are presented as reported. Inferred data is explicitly labelled.</p>
+      <p><strong>Search engine:</strong> Google Search grounding — searches the live web with priority given to approved sources.</p>
+      <p><strong>Anti-hallucination:</strong> The agent never invents numbers. Any figure that cannot be sourced is omitted. Every metric includes its source and time period.</p>
     </div>
   </div>
 </div>
-
+ 
 <script>
-/* ── SYSTEM PROMPT ── */
-const SYS = `You are the Sobha Realty Market Intelligence Agent — a senior-grade research analyst producing decision-quality intelligence for Sobha Realty leadership.
-
-APPROVED SOURCES — search and cite only from:
-- Government (Tier 1): Dubai Land Department (dubailand.gov.ae), Dubai REST, Dubai Pulse
-- UAE Press (Tier 2): Gulf News Property, Khaleej Times, The National
-- Portals (Tier 3): Bayut, Property Finder, DXB Interact
-- Research (Tier 4): Propsearch.ae, fäm Properties, Global Property Guide
-FALLBACK: If no approved source has data, use best available public source and set hasUnverified: true.
-
+const WORKER = 'https://sobha-market-intel.shubhambhaskar7898.workers.dev';
+ 
+const SYS_PROMPT = `You are the Sobha Realty Market Intelligence Agent — a senior research analyst producing decision-quality intelligence for Sobha Realty leadership in Dubai.
+ 
+APPROVED SOURCES — prioritise these when searching:
+Government (Tier 1): Dubai Land Department (dubailand.gov.ae), Dubai REST, Dubai Pulse
+UAE Press (Tier 2): Gulf News Property, Khaleej Times, The National
+Portals (Tier 3): Bayut, Property Finder, DXB Interact
+Research (Tier 4): Propsearch.ae, fäm Properties, Global Property Guide
+ 
 STRICT RULES:
-- Never invent numbers. Omit any stat you cannot source.
-- Every figure must include its source name and time period inline.
+- Never invent numbers. Omit any stat you cannot find from a real source.
+- Every figure must include its source name and time period inline within the finding sentence.
 - Findings must be complete standalone sentences.
 - Executive summary must be 2-3 sentences max, decision-oriented.
 - Strategic interpretation is the "so what" — why this matters strategically.
-- Implications must be broken into 4 dimensions: pricing, positioning, product, sales response.
+- Implications must be broken into 4 dimensions: pricing, positioning, product, salesResponse.
 - Suggested next questions must be specific and actionable follow-ups.
-
-REQUIRED OUTPUT — valid JSON only, nothing before or after:
+- hasUnverified should be true if any data came from outside the approved source list.
+ 
+REQUIRED OUTPUT — respond with a single valid JSON object and nothing else:
 {
   "title": "Concise topic title, max 58 chars",
-  "date": "14 Apr 2026",
+  "date": "20 Apr 2026",
   "coveragePeriod": "e.g. Q1 2026 or Last 60 days",
-  "executiveSummary": "2-3 sentence decision-oriented summary of the most important finding and what it means.",
+  "executiveSummary": "2-3 sentence decision-oriented summary.",
   "findings": [
-    {"text": "Complete sentence with source and period. E.g.: Dubai recorded AED 252bn in transactions in Q1 2026, a 31% YoY rise (Dubai Land Department, Apr 2026).", "source": "Dubai Land Department", "sourceType": "gov", "period": "Q1 2026", "priority": "primary"},
-    {"text": "Second finding.", "source": "Gulf News", "sourceType": "press", "period": "Mar 2026", "priority": "secondary"},
+    {"text": "Complete sentence with source and period inline.", "source": "Dubai Land Department", "sourceType": "gov", "period": "Q1 2026", "priority": "primary"},
+    {"text": "Second finding.", "source": "Gulf News", "sourceType": "press", "period": "Apr 2026", "priority": "secondary"},
     {"text": "Third finding.", "source": "Bayut", "sourceType": "portal", "period": "Apr 2026", "priority": "secondary"},
-    {"text": "Fourth finding.", "source": "fäm Properties", "sourceType": "research", "period": "Q1 2026", "priority": "secondary"},
+    {"text": "Fourth finding.", "source": "fam Properties", "sourceType": "research", "period": "Q1 2026", "priority": "secondary"},
     {"text": "Fifth finding.", "source": "The National", "sourceType": "press", "period": "Apr 2026", "priority": "secondary"}
   ],
-  "strategicInterpretation": "1-2 sentences on the deeper strategic meaning — what trend or shift this signals.",
+  "strategicInterpretation": "1-2 sentences on the deeper strategic meaning.",
   "implications": {
     "pricing": "What Sobha should consider on pricing.",
-    "positioning": "What this means for Sobha brand/market position.",
+    "positioning": "What this means for Sobha brand position.",
     "product": "Any product or unit type implications.",
     "salesResponse": "Recommended sales or channel response."
   },
@@ -810,24 +572,32 @@ REQUIRED OUTPUT — valid JSON only, nothing before or after:
     {"value": "60,303", "label": "Total Transactions"}
   ],
   "nextQuestions": [
-    "Compare Sobha's launch pricing against this quarter's market average",
+    "Compare Sobha launch pricing against this quarter market average",
     "Show villa absorption rates by community in Dubai Hills",
-    "Summarise Emaar's launch pipeline for the next 90 days"
+    "Summarise Emaar launch pipeline for the next 90 days"
   ],
   "sources": [{"name": "Dubai Land Department", "type": "gov"}, {"name": "Gulf News", "type": "press"}],
   "hasUnverified": false
 }
-
-marketData MUST have exactly 3 items. nextQuestions MUST have exactly 3 items. Never leave these empty.`;
-
-/* ── STATE ── */
+ 
+marketData MUST have exactly 3 items. nextQuestions MUST have exactly 3 items.`;
+ 
+const NEWS_SYS = `You are a Dubai real estate news summariser. Search for today's top real estate news from Dubai. Return ONLY a valid JSON array of exactly 5 objects. Nothing before or after the JSON array.
+ 
+Format:
+[
+  {"headline": "Professional factual headline under 90 chars", "source": "Source Name", "sourceType": "press", "category": "Pricing"},
+  ...
+]
+ 
+Rules: headlines factual and concise. sourceType must be: gov, press, portal, or research. category must be one of: Pricing, Launches, Transactions, Policy, Market. Only news from last 48 hours. Return only the JSON array.`;
+ 
+/* STATE */
 let appHistory = [];
 let lastQuery = '';
-let lastFilters = {};
-
 try { appHistory = JSON.parse(localStorage.getItem('sobha_intel_history') || '[]'); } catch(e) { appHistory = []; }
-
-/* ── TEXTAREA ── */
+ 
+/* TEXTAREA */
 const ta = document.getElementById('queryInput');
 ta.addEventListener('input', function() {
   this.style.height = 'auto';
@@ -838,15 +608,15 @@ ta.addEventListener('input', function() {
   cc.className = 'char-ct' + (n > 450 ? ' warn' : '');
 });
 ta.addEventListener('keydown', e => { if ((e.ctrlKey||e.metaKey) && e.key==='Enter') runQuery(); });
-
-/* ── TOAST ── */
+ 
+/* TOAST */
 function toast(msg) {
   const el = document.getElementById('toast');
   el.textContent = msg; el.classList.add('show');
   setTimeout(() => el.classList.remove('show'), 2400);
 }
-
-/* ── TEMPLATES ── */
+ 
+/* TEMPLATES */
 const TEMPLATES = {
   competitor: "What has Emaar launched in the past 60 days? Summarise the projects, pricing, locations and target segments.",
   pricing:    "What is the current price per sqft trend for luxury villas in Dubai Hills Estate and Sobha Hartland? Include YoY movement and recent transaction data.",
@@ -855,47 +625,55 @@ const TEMPLATES = {
   offplan:    "What are the top off-plan projects by sales volume in Dubai this quarter? Include developer, community, pricing, and absorption rate.",
   briefing:   "Produce a senior leadership briefing on the current Dubai real estate market — key trends, risks, competitor moves, and implications for a premium developer."
 };
-
+ 
 function useTemplate(key) {
-  const q = TEMPLATES[key];
-  if (!q) return;
-  ta.value = q;
-  ta.style.height = 'auto';
-  ta.style.height = Math.min(ta.scrollHeight, 180) + 'px';
+  const q = TEMPLATES[key]; if (!q) return;
+  ta.value = q; ta.style.height = 'auto'; ta.style.height = Math.min(ta.scrollHeight, 180) + 'px';
   document.getElementById('charCount').textContent = q.length + ' / 500';
-  ta.focus();
-  ta.scrollIntoView({behavior:'smooth', block:'center'});
+  ta.focus(); ta.scrollIntoView({behavior:'smooth', block:'center'});
 }
-
-/* ── RUN ── */
+ 
+/* CALL WORKER */
+async function callWorker(prompt, systemPrompt) {
+  const r = await fetch(WORKER, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({prompt, systemPrompt})
+  });
+  if (!r.ok) {
+    const err = await r.json().catch(() => ({}));
+    if (r.status === 429 || err.rateLimit) throw new Error('RATE_LIMIT');
+    throw new Error(err.error || 'Worker error ' + r.status);
+  }
+  return r.json();
+}
+ 
+/* RUN QUERY */
 async function runQuery() {
   const q = ta.value.trim();
   if (!q) { toast('Please enter a query first'); return; }
   if (q.length > 500) { toast('Query too long — keep under 500 characters'); return; }
-
+ 
   const period = document.getElementById('fPeriod').value;
   const geo    = document.getElementById('fGeo').value;
   const asset  = document.getElementById('fAsset').value;
   const mode   = document.getElementById('fMode').value;
-
-  // Build enriched query with filter context
+ 
   let enriched = q;
-  const filterCtx = [];
-  if (period) filterCtx.push(`Time period: ${period === '30' ? 'last 30 days' : period === '60' ? 'last 60 days' : period === '90' ? 'last 90 days' : 'this quarter'}`);
-  if (geo)    filterCtx.push(`Geography: ${geo}`);
-  if (asset)  filterCtx.push(`Asset type: ${asset}`);
-  if (mode)   filterCtx.push(`Output mode: ${mode}`);
-  if (filterCtx.length) enriched += '\n\nScope: ' + filterCtx.join(', ') + '.';
-
+  const ctx = [];
+  if (period) ctx.push('Time period: ' + {30:'last 30 days',60:'last 60 days',90:'last 90 days',quarter:'this quarter',year:'this year'}[period]);
+  if (geo)    ctx.push('Geography: ' + geo);
+  if (asset)  ctx.push('Asset type: ' + asset);
+  if (mode)   ctx.push('Output mode: ' + mode);
+  if (ctx.length) enriched += '\n\nScope: ' + ctx.join(', ') + '.';
+ 
   lastQuery = q;
-  lastFilters = {period, geo, asset, mode};
-
+ 
   const btn = document.getElementById('runBtn');
   btn.disabled = true;
-
   hide('welcomeState'); hide('reportOutput'); hide('errorState');
   show('loadingState');
-
+ 
   const steps = ['ls1','ls2','ls3','ls4'];
   let si = 0;
   steps.forEach(s => document.getElementById(s).className = 'l-step');
@@ -903,80 +681,63 @@ async function runQuery() {
     if (si > 0) document.getElementById(steps[si-1]).className = 'l-step done';
     if (si < steps.length) { document.getElementById(steps[si]).className = 'l-step active'; si++; }
   }, 900);
-
+ 
   try {
-    let msgs = [{role:'user', content:enriched}];
-    let data = await callAPI(msgs);
-
-    while (data.stop_reason === 'tool_use') {
-      const toolBlocks = data.content.filter(b => b.type === 'tool_use');
-      msgs.push({role:'assistant', content:data.content});
-      msgs.push({role:'user', content:toolBlocks.map(tb => ({type:'tool_result', tool_use_id:tb.id, content:'Search completed'}))});
-      data = await callAPI(msgs);
-    }
-
+    const result = await callWorker(enriched, SYS_PROMPT);
     clearInterval(timer);
     steps.forEach(s => document.getElementById(s).className = 'l-step done');
-
-    const text = (data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('\n').trim();
-    let report = tryParseJSON(text) || parsePlain(text, q);
-
-    if (!report.marketData || !report.marketData.length) report.marketData = extractMetrics(report.findings||[], text);
-
+ 
+    let report = tryParseJSON(result.text);
+    if (!report) report = parsePlain(result.text, q);
+ 
+    // Merge grounding sources from Gemini if available
+    if (result.sources && result.sources.length && (!report.sources || !report.sources.length)) {
+      report.sources = result.sources.slice(0, 6).map(s => ({
+        name: s.name || 'Web source',
+        type: classifySource(s.name || '')
+      }));
+    }
+ 
+    if (!report.marketData || !report.marketData.length) {
+      report.marketData = extractMetrics(report.findings || [], result.text);
+    }
+ 
     hide('loadingState');
     renderReport(report, q, mode);
     addHistory(q, report);
-
+ 
   } catch(err) {
     clearInterval(timer);
     hide('loadingState');
     if (err.message === 'RATE_LIMIT') {
-      showError('Service temporarily busy', 'The service is handling too many requests right now. Please wait a moment and try again.', true);
+      showError('Service temporarily busy', 'Too many requests right now. Please wait a moment and try again.');
     } else {
-      showError('Unable to complete request', 'The service could not be reached. Please check your connection and try again.', false);
+      showError('Unable to complete request', 'The service could not be reached. Please check your connection and try again.');
     }
   }
   btn.disabled = false;
 }
-
-async function callAPI(messages) {
-  const WORKER = 'https://sobha-market-intel.shubhambhaskar7898.workers.dev';
-  const r = await fetch(WORKER, {
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({
-      model:'claude-sonnet-4-20250514',
-      max_tokens:2000,
-      system:SYS,
-      tools:[{type:'web_search_20250305',name:'web_search'}],
-      messages
-    })
-  });
-  if (!r.ok) {
-    const err = await r.json().catch(()=>({}));
-    if (r.status === 429) throw new Error('RATE_LIMIT');
-    throw new Error(err.error?.message || 'Error ' + r.status);
-  }
-  return r.json();
-}
-
-function retryQuery() {
-  ta.value = lastQuery;
-  hide('errorState');
-  runQuery();
-}
-
-function showError(title, msg, isRateLimit) {
+ 
+function retryQuery() { hide('errorState'); if (lastQuery) { ta.value = lastQuery; runQuery(); } }
+function showError(title, msg) {
   document.getElementById('errTitle').textContent = title;
   document.getElementById('errMsg').textContent = msg;
   show('errorState');
 }
-
-/* ── PARSE HELPERS ── */
+ 
+/* HELPERS */
 function tryParseJSON(text) {
-  try { const m = text.match(/\{[\s\S]*\}/); return m ? JSON.parse(m[0]) : null; } catch(e) { return null; }
+  try {
+    // Try direct parse first
+    return JSON.parse(text);
+  } catch(e) {}
+  try {
+    // Try extracting JSON object
+    const m = text.match(/\{[\s\S]*\}/);
+    return m ? JSON.parse(m[0]) : null;
+  } catch(e) { return null; }
 }
-
+ 
 function parsePlain(text, q) {
   const lines = text.split('\n').map(l=>l.trim()).filter(Boolean);
   const findings = [];
@@ -988,16 +749,24 @@ function parsePlain(text, q) {
     title: q.slice(0,58), date: today(), coveragePeriod:'',
     executiveSummary: findings[0]?.text || text.slice(0,200),
     findings: findings.length ? findings : [{text:text.slice(0,280), source:'', sourceType:'', period:'', priority:'primary'}],
-    strategicInterpretation:'',
-    implications:{pricing:'', positioning:'', product:'', salesResponse:''},
+    strategicInterpretation:'', implications:{pricing:'',positioning:'',product:'',salesResponse:''},
     marketData:[], nextQuestions:[], sources:[], hasUnverified:true
   };
 }
-
+ 
+function classifySource(name) {
+  const n = name.toLowerCase();
+  if (n.includes('land department') || n.includes('dubai pulse') || n.includes('dubai rest')) return 'gov';
+  if (n.includes('gulf news') || n.includes('khaleej') || n.includes('national') || n.includes('arabian business')) return 'press';
+  if (n.includes('bayut') || n.includes('property finder') || n.includes('dxb')) return 'portal';
+  if (n.includes('propsearch') || n.includes('fam') || n.includes('global property')) return 'research';
+  return 'web';
+}
+ 
 function extractMetrics(findings, text) {
-  const src = [...(findings.map ? findings.map(f=>f.text||f) : findings), text].join(' ');
-  const metrics=[]; const seen=new Set();
-  const pats=[
+  const src = [...(Array.isArray(findings) ? findings.map(f => f.text||f) : []), text].join(' ');
+  const metrics = []; const seen = new Set();
+  const pats = [
     {re:/AED\s*([\d,.]+\s*(?:billion|million|bn|mn|b|m)?)/gi, label:'Transaction Value'},
     {re:/([\d,.]+)\s*%\s*(?:year[- ]on[- ]year|yoy|increase|rise|growth)/gi, label:'YoY Growth'},
     {re:/AED\s*([\d,]+)\s*(?:per\s*sq|psf|\/sqft)/gi, label:'Price per Sq Ft'},
@@ -1005,160 +774,161 @@ function extractMetrics(findings, text) {
     {re:/([\d,.]+\s*(?:billion|bn|million|mn))\s*(?:in\s*)?(?:sales|deals)/gi, label:'Sales Volume'},
   ];
   for (const {re,label} of pats) {
-    if (metrics.length>=3) break;
-    re.lastIndex=0; const m=re.exec(src);
-    if (m) { const v=m[1].trim(); if (!seen.has(v)) { seen.add(v); metrics.push({value:v.length>14?v.slice(0,14):v,label}); } }
+    if (metrics.length >= 3) break;
+    re.lastIndex = 0; const m = re.exec(src);
+    if (m) { const v = m[1].trim(); if (!seen.has(v)) { seen.add(v); metrics.push({value:v.length>14?v.slice(0,14):v, label}); } }
   }
-  if (metrics.length<3) {
-    const nums=(src.match(/\b(AED\s*[\d,.]+\s*(?:bn|mn|billion|million)?|[\d,.]+%|[\d,]{5,})\b/g)||[]);
+  if (metrics.length < 3) {
+    const nums = (src.match(/\b(AED\s*[\d,.]+\s*(?:bn|mn|billion|million)?|[\d,.]+%|[\d,]{5,})\b/g)||[]);
     for (const n of nums) { if (metrics.length>=3) break; const c=n.trim(); if (!seen.has(c)&&c.length<18){seen.add(c);metrics.push({value:c,label:'Key Metric'});} }
   }
   return metrics;
 }
-
-function cleanText(text) {
-  return String(text)
-    .replace(/^["'\[{\s\\]+|["'\]}\s\\]+$/g,'')
+ 
+function cleanText(t) {
+  return String(t).replace(/^["'\[{\s\\]+|["'\]}}\s\\]+$/g,'')
     .replace(/\\n/g,' ').replace(/\\"/g,'"')
     .replace(/^\d+\.\s+/,'').replace(/^[-•*]\s+/,'')
     .replace(/\*\*(.*?)\*\*/g,'$1').trim();
 }
-
+ 
 function today() { return new Date().toLocaleDateString('en-AE',{day:'numeric',month:'short',year:'numeric'}); }
-
-/* ── RENDER ── */
+ 
+/* RENDER REPORT */
 function renderReport(report, q, mode) {
   document.getElementById('rptTitle').textContent = report.title || q.slice(0,60);
   document.getElementById('rptDate').textContent = report.date || today();
-  document.getElementById('rptCoverage').textContent = report.coveragePeriod || 'All sources';
-  document.getElementById('rptMode').textContent = mode === 'summary' ? 'Executive Summary' : mode === 'briefing' ? 'Briefing Note' : mode === 'comparison' ? 'Comparison' : 'Detailed Report';
-
-  // Executive summary
-  const es = cleanText(report.executiveSummary || '');
-  document.getElementById('execSummary').textContent = es || '—';
-
-  // Findings with priority + inline source
-  const fl = document.getElementById('findingsList');
-  fl.innerHTML = '';
-  const findings = Array.isArray(report.findings) ? report.findings : [];
-  findings.forEach((f, i) => {
-    const fObj = typeof f === 'string' ? {text:f, source:'', sourceType:'', period:'', priority:'secondary'} : f;
-    const txt = cleanText(fObj.text || '');
-    if (!txt) return;
-    const isPrimary = fObj.priority === 'primary' || i === 0;
-    const li = document.createElement('li');
-    if (isPrimary) li.className = 'primary';
+  document.getElementById('rptCoverage').textContent = report.coveragePeriod || 'Live data';
+  document.getElementById('rptMode').textContent = {summary:'Executive Summary',briefing:'Briefing Note',comparison:'Comparison'}[mode] || 'Detailed Report';
+  document.getElementById('execSummary').textContent = cleanText(report.executiveSummary || '—');
+ 
+  // Findings
+  const fl = document.getElementById('findingsList'); fl.innerHTML = '';
+  (Array.isArray(report.findings) ? report.findings : []).forEach((f, i) => {
+    const fObj = typeof f === 'string' ? {text:f,source:'',sourceType:'',period:'',priority:'secondary'} : f;
+    const txt = cleanText(fObj.text||''); if (!txt) return;
+    const isPrimary = fObj.priority==='primary' || i===0;
+    const li = document.createElement('li'); if (isPrimary) li.className = 'primary';
     const srcDot = fObj.sourceType ? `<span class="fi-src-dot sc-dot ${fObj.sourceType}"></span>` : '';
-    const srcLabel = fObj.source ? `${srcDot}${fObj.source}${fObj.period ? ' · ' + fObj.period : ''}` : '';
-    li.innerHTML = `
-      <div class="fi-rank">${i+1}</div>
-      <div class="fi-body">
-        <div class="fi-text">${txt}</div>
-        ${srcLabel ? `<div class="fi-source">${srcLabel}</div>` : ''}
-      </div>`;
+    const srcLabel = fObj.source ? `${srcDot}${fObj.source}${fObj.period?' · '+fObj.period:''}` : '';
+    li.innerHTML = `<div class="fi-rank">${i+1}</div><div class="fi-body"><div class="fi-text">${txt}</div>${srcLabel?`<div class="fi-source">${srcLabel}</div>`:''}`;
     fl.appendChild(li);
   });
-  if (!fl.children.length) {
-    fl.innerHTML = `<li><div class="fi-rank">—</div><div class="fi-body"><div class="fi-text">No findings returned. Please try rephrasing your query.</div></div></li>`;
-  }
-
+  if (!fl.children.length) fl.innerHTML = `<li><div class="fi-rank">—</div><div class="fi-body"><div class="fi-text">No findings returned. Please try rephrasing your query.</div></div></li>`;
+ 
   // Strategic interpretation
-  const interp = cleanText(report.strategicInterpretation || '');
+  const interp = cleanText(report.strategicInterpretation||'');
   document.getElementById('interpText').textContent = interp || '—';
   document.getElementById('interpSec').style.display = interp ? 'block' : 'none';
-
-  // Implications grid
-  const ig = document.getElementById('implGrid');
-  ig.innerHTML = '';
+ 
+  // Implications
+  const ig = document.getElementById('implGrid'); ig.innerHTML = '';
   const impl = report.implications || {};
-  const implDims = [
-    {key:'pricing', label:'Pricing'},
-    {key:'positioning', label:'Positioning'},
-    {key:'product', label:'Product'},
-    {key:'salesResponse', label:'Sales Response'},
-  ];
-  implDims.forEach(d => {
-    const val = cleanText(impl[d.key] || '');
-    if (!val) return;
-    const cell = document.createElement('div');
-    cell.className = 'impl-cell';
+  [{key:'pricing',label:'Pricing'},{key:'positioning',label:'Positioning'},{key:'product',label:'Product'},{key:'salesResponse',label:'Sales Response'}].forEach(d => {
+    const val = cleanText(impl[d.key]||''); if (!val) return;
+    const cell = document.createElement('div'); cell.className = 'impl-cell';
     cell.innerHTML = `<div class="impl-cell-label">${d.label}</div><div class="impl-cell-text">${val}</div>`;
     ig.appendChild(cell);
   });
-  if (!ig.children.length) {
-    ig.innerHTML = `<div class="impl-cell" style="grid-column:1/-1"><div class="impl-cell-text" style="color:var(--text-faint)">No specific implications extracted for this query.</div></div>`;
-  }
-
+  if (!ig.children.length) ig.innerHTML = `<div class="impl-cell" style="grid-column:1/-1"><div class="impl-cell-text" style="color:var(--text-faint)">No specific implications extracted.</div></div>`;
+ 
   // Market data
-  const dr = document.getElementById('dataRow');
-  dr.innerHTML = '';
+  const dr = document.getElementById('dataRow'); dr.innerHTML = '';
   const md = Array.isArray(report.marketData) ? report.marketData : [];
   if (md.length) {
-    md.forEach(d => {
-      const cell = document.createElement('div'); cell.className = 'data-cell';
-      cell.innerHTML = `<div class="dc-label">${d.label||''}</div><div class="dc-value">${d.value||'—'}</div>`;
-      dr.appendChild(cell);
-    });
-  } else {
-    dr.innerHTML = `<div class="data-empty">No quantitative data extracted for this query.</div>`;
-  }
-
+    md.forEach(d => { const c = document.createElement('div'); c.className='data-cell'; c.innerHTML=`<div class="dc-label">${d.label||''}</div><div class="dc-value">${d.value||'—'}</div>`; dr.appendChild(c); });
+  } else { dr.innerHTML = `<div class="data-empty">No quantitative data extracted.</div>`; }
+ 
   // Next questions
-  const nql = document.getElementById('nextQList');
-  nql.innerHTML = '';
-  const nqs = Array.isArray(report.nextQuestions) ? report.nextQuestions : [];
-  nqs.forEach(nq => {
-    const btn = document.createElement('button');
-    btn.className = 'next-q-item';
+  const nql = document.getElementById('nextQList'); nql.innerHTML = '';
+  (Array.isArray(report.nextQuestions) ? report.nextQuestions : []).forEach(nq => {
+    const btn = document.createElement('button'); btn.className = 'next-q-item';
     btn.innerHTML = `<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> ${cleanText(nq)}`;
     btn.onclick = () => { ta.value = cleanText(nq); ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,180)+'px'; document.getElementById('charCount').textContent=ta.value.length+' / 500'; ta.focus(); ta.scrollIntoView({behavior:'smooth',block:'center'}); };
     nql.appendChild(btn);
   });
-  document.getElementById('nextSec').style.display = nqs.length ? 'block' : 'none';
-
+  document.getElementById('nextSec').style.display = (report.nextQuestions||[]).length ? 'block' : 'none';
+ 
   // Sources
-  const sg = document.getElementById('sourcesGrid');
-  sg.innerHTML = '';
+  const sg = document.getElementById('sourcesGrid'); sg.innerHTML = '';
   (report.sources||[]).forEach(s => {
-    const chip = document.createElement('div'); chip.className = 'src-chip';
-    chip.innerHTML = `<span class="sc-dot ${s.type||'research'}"></span><span class="sc-name">${s.name}</span><span class="sc-type">${s.type||''}</span>`;
+    const chip = document.createElement('div'); chip.className='src-chip';
+    chip.innerHTML = `<span class="sc-dot ${s.type||'web'}"></span><span class="sc-name">${s.name}</span>`;
     sg.appendChild(chip);
   });
-  const uv = document.getElementById('unverifiedFlag');
-  uv.style.display = report.hasUnverified ? 'flex' : 'none';
-
+  document.getElementById('unverifiedFlag').style.display = report.hasUnverified ? 'flex' : 'none';
+ 
   show('reportOutput');
   setTimeout(() => document.getElementById('reportOutput').scrollIntoView({behavior:'smooth',block:'start'}), 60);
 }
-
-/* ── HISTORY (localStorage persisted) ── */
-function saveHistory() {
-  try { localStorage.setItem('sobha_intel_history', JSON.stringify(appHistory.slice(0,20))); } catch(e) {}
+ 
+/* NEWS FEED */
+async function loadNewsFeed() {
+  try {
+    const result = await callWorker('Get the top 5 Dubai real estate news headlines from today and yesterday.', NEWS_SYS);
+    const text = result.text || '';
+    const match = text.match(/\[[\s\S]*\]/);
+    if (!match) throw new Error('no JSON array');
+    const items = JSON.parse(match[0]);
+    renderNewsFeed(items);
+  } catch(e) {
+    renderNewsFeedError();
+  }
 }
-
+ 
+function renderNewsFeed(items) {
+  const feed = document.getElementById('newsFeed');
+  const status = document.getElementById('newsStatus');
+  if (!feed) return;
+  const dotColors = {press:'var(--amber)',portal:'var(--blue)',gov:'var(--green)',research:'var(--purple)'};
+  const now = new Date().toLocaleTimeString('en-AE',{hour:'2-digit',minute:'2-digit'});
+  feed.innerHTML = items.map(item => `
+    <div class="news-item" onclick="fillQueryFromNews('${(item.headline||'').replace(/'/g,"\'")}')">
+      <span class="news-source-dot" style="background:${dotColors[item.sourceType]||'var(--text-faint)'}"></span>
+      <div class="news-body">
+        <div class="news-headline">${item.headline||''}</div>
+        <div class="news-meta"><span>${item.source||''}</span><span>·</span><span>${item.category||''}</span></div>
+      </div>
+    </div>`).join('');
+  if (status) status.textContent = 'Updated ' + now;
+  const dot = document.getElementById('newsDot');
+  if (dot) dot.style.background = 'var(--green)';
+}
+ 
+function renderNewsFeedError() {
+  const feed = document.getElementById('newsFeed');
+  const status = document.getElementById('newsStatus');
+  if (feed) feed.innerHTML = `<div style="padding:16px;text-align:center;font-size:12px;color:var(--text-faint);background:var(--white);border:1px solid var(--border-light);border-radius:8px">Headlines unavailable — check connection</div>`;
+  if (status) status.textContent = 'Unavailable';
+  const dot = document.getElementById('newsDot');
+  if (dot) dot.style.background = '#ccc';
+}
+ 
+function fillQueryFromNews(headline) {
+  const q = 'Research this story and provide a detailed analysis with implications for Sobha Realty: "' + headline + '"';
+  ta.value = q; ta.style.height='auto'; ta.style.height=Math.min(ta.scrollHeight,180)+'px';
+  document.getElementById('charCount').textContent = q.length + ' / 500';
+  ta.focus(); document.getElementById('composer').scrollIntoView({behavior:'smooth',block:'center'});
+}
+ 
+/* HISTORY */
+function saveHistory() { try { localStorage.setItem('sobha_intel_history', JSON.stringify(appHistory.slice(0,20))); } catch(e) {} }
+ 
 function addHistory(q, report) {
   const id = Date.now();
   appHistory.unshift({id, q, report, time: new Date().toISOString()});
   saveHistory();
-
   document.getElementById('noHist').style.display = 'none';
   document.getElementById('clearAllBtn').style.display = 'block';
-
   const hl = document.getElementById('histList');
   hl.querySelectorAll('.hist-item').forEach(i=>i.classList.remove('active'));
-
   const el = document.createElement('div');
   el.className = 'hist-item active'; el.dataset.id = id;
   const t = new Date().toLocaleTimeString('en-AE',{hour:'2-digit',minute:'2-digit'});
-  el.innerHTML = `
-    <div class="hi-body" onclick="restoreReport(${id})">
-      <div class="hi-title">${report.title||q.slice(0,50)}</div>
-      <div class="hi-meta"><span>${t}</span></div>
-    </div>
-    <button class="hi-del" title="Remove" onclick="delItem(${id},event)">×</button>`;
+  el.innerHTML = `<div class="hi-body" onclick="restoreReport(${id})"><div class="hi-title">${report.title||q.slice(0,50)}</div><div class="hi-meta"><span>${t}</span></div></div><button class="hi-del" onclick="delItem(${id},event)">×</button>`;
   hl.insertBefore(el, document.getElementById('noHist').nextSibling);
 }
-
+ 
 function loadHistory() {
   if (!appHistory.length) return;
   document.getElementById('noHist').style.display = 'none';
@@ -1168,16 +938,11 @@ function loadHistory() {
     const el = document.createElement('div');
     el.className = 'hist-item'; el.dataset.id = entry.id;
     const t = entry.time ? new Date(entry.time).toLocaleTimeString('en-AE',{hour:'2-digit',minute:'2-digit'}) : '';
-    el.innerHTML = `
-      <div class="hi-body" onclick="restoreReport(${entry.id})">
-        <div class="hi-title">${entry.report?.title||entry.q?.slice(0,50)||'Report'}</div>
-        <div class="hi-meta"><span>${t}</span></div>
-      </div>
-      <button class="hi-del" title="Remove" onclick="delItem(${entry.id},event)">×</button>`;
+    el.innerHTML = `<div class="hi-body" onclick="restoreReport(${entry.id})"><div class="hi-title">${entry.report?.title||entry.q?.slice(0,50)||'Report'}</div><div class="hi-meta"><span>${t}</span></div></div><button class="hi-del" onclick="delItem(${entry.id},event)">×</button>`;
     hl.appendChild(el);
   });
 }
-
+ 
 function delItem(id, e) {
   e.stopPropagation();
   const el = document.querySelector(`.hist-item[data-id="${id}"]`);
@@ -1186,15 +951,14 @@ function delItem(id, e) {
   saveHistory();
   if (!appHistory.length) { document.getElementById('noHist').style.display='block'; document.getElementById('clearAllBtn').style.display='none'; }
 }
-
+ 
 function clearAll() {
   document.querySelectorAll('.hist-item').forEach(i=>i.remove());
-  appHistory = [];
-  saveHistory();
+  appHistory = []; saveHistory();
   document.getElementById('noHist').style.display = 'block';
   document.getElementById('clearAllBtn').style.display = 'none';
 }
-
+ 
 function restoreReport(id) {
   const entry = appHistory.find(r=>r.id===id); if (!entry) return;
   hide('welcomeState'); hide('loadingState'); hide('errorState');
@@ -1204,168 +968,56 @@ function restoreReport(id) {
   document.querySelectorAll('.hist-item').forEach(i=>i.classList.remove('active'));
   document.querySelector(`.hist-item[data-id="${id}"]`)?.classList.add('active');
 }
-
-/* ── EXPORT ── */
+ 
+/* EXPORT */
 function copyReport() {
-  const title   = document.getElementById('rptTitle').textContent;
-  const summary = document.getElementById('execSummary').textContent;
-  const findings= [...document.querySelectorAll('#findingsList .fi-text')].map((el,i)=>`${i+1}. ${el.textContent}`).join('\n');
-  const metrics = [...document.querySelectorAll('#dataRow .data-cell')].map(c=>`${c.querySelector('.dc-label').textContent}: ${c.querySelector('.dc-value').textContent}`).join(' | ');
-  const interp  = document.getElementById('interpText').textContent;
-  const implCells = [...document.querySelectorAll('#implGrid .impl-cell')].map(c=>`${c.querySelector('.impl-cell-label').textContent}: ${c.querySelector('.impl-cell-text').textContent}`).join('\n');
-  const out = `SOBHA REALTY — MARKET INTELLIGENCE\n${title}\n\nEXECUTIVE SUMMARY\n${summary}\n\nKEY FINDINGS\n${findings}\n\nMARKET DATA\n${metrics}\n\nSTRATEGIC INTERPRETATION\n${interp}\n\nIMPLICATIONS FOR SOBHA\n${implCells}`;
+  const title    = document.getElementById('rptTitle').textContent;
+  const summary  = document.getElementById('execSummary').textContent;
+  const findings = [...document.querySelectorAll('#findingsList .fi-text')].map((el,i)=>`${i+1}. ${el.textContent}`).join('\n');
+  const metrics  = [...document.querySelectorAll('#dataRow .data-cell')].map(c=>`${c.querySelector('.dc-label').textContent}: ${c.querySelector('.dc-value').textContent}`).join(' | ');
+  const interp   = document.getElementById('interpText').textContent;
+  const impl     = [...document.querySelectorAll('#implGrid .impl-cell')].map(c=>`${c.querySelector('.impl-cell-label').textContent}: ${c.querySelector('.impl-cell-text').textContent}`).join('\n');
+  const out = `SOBHA REALTY — MARKET INTELLIGENCE\n${title}\n\nEXECUTIVE SUMMARY\n${summary}\n\nKEY FINDINGS\n${findings}\n\nMARKET DATA\n${metrics}\n\nSTRATEGIC INTERPRETATION\n${interp}\n\nIMPLICATIONS FOR SOBHA\n${impl}`;
   navigator.clipboard.writeText(out).then(()=>toast('Report copied to clipboard'));
 }
-
-function exportPDF() {
-  toast('Opening print dialog — choose Save as PDF');
-  setTimeout(()=>window.print(), 400);
-}
-
-/* ── METHODOLOGY ── */
-function showMeth() {
-  document.getElementById('methModal').style.display = 'flex';
-}
-
-document.getElementById('methModal').addEventListener('click', function(e) {
-  if (e.target === this) this.style.display = 'none';
-});
-
+ 
+/* METHODOLOGY */
+function showMeth() { document.getElementById('methModal').style.display='flex'; }
+document.getElementById('methModal').addEventListener('click', function(e) { if (e.target===this) this.style.display='none'; });
 let methOpen = false;
 function toggleMeth() {
   methOpen = !methOpen;
-  document.getElementById('methContent').className = 'meth-content' + (methOpen ? ' open' : '');
-  document.getElementById('methToggle').className   = 'meth-toggle' + (methOpen ? ' open' : '');
+  document.getElementById('methContent').className = 'meth-content' + (methOpen?' open':'');
+  document.getElementById('methToggle').className  = 'meth-toggle' + (methOpen?' open':'');
 }
-
-/* ── NAV ── */
+ 
+/* NAV */
 function goHome() {
-  ta.value=''; ta.style.height='';
-  document.getElementById('charCount').textContent='0 / 500';
-  hide('reportOutput'); hide('loadingState'); hide('errorState');
-  show('welcomeState');
+  ta.value=''; ta.style.height=''; document.getElementById('charCount').textContent='0 / 500';
+  hide('reportOutput'); hide('loadingState'); hide('errorState'); show('welcomeState');
   document.querySelectorAll('.hist-item').forEach(i=>i.classList.remove('active'));
   window.scrollTo({top:0,behavior:'smooth'});
 }
-
-/* ── UTILS ── */
-function show(id) { const el=document.getElementById(id); if(el) el.style.display = el.classList.contains('report-output')||el.classList.contains('loading-state')||el.classList.contains('error-state') ? '' : 'block'; if(el?.classList.contains('report-output')) el.classList.add('visible'); if(el?.classList.contains('loading-state')) el.classList.add('visible'); if(el?.classList.contains('error-state')) el.classList.add('visible'); }
-function hide(id) { const el=document.getElementById(id); if(!el) return; if(el.classList.contains('report-output')) el.classList.remove('visible'); else if(el.classList.contains('loading-state')) el.classList.remove('visible'); else if(el.classList.contains('error-state')) el.classList.remove('visible'); else el.style.display='none'; }
-
-/* ── NEWS FEED ── */
-const NEWS_PROMPT = `Search for today's top Dubai real estate market news from Gulf News, Khaleej Times, The National, Bayut, and DXB Interact. Return ONLY a JSON array of exactly 5 headline objects. Nothing before or after the JSON.
-
-Format:
-[
-  {"headline": "Short professional headline under 90 chars", "source": "Source Name", "sourceType": "press|portal|gov", "category": "Pricing|Launches|Transactions|Policy|Market"},
-  ...
-]
-
-Rules:
-- Headlines must be factual, concise, and professional — no sensationalism
-- Each headline must be a different category if possible
-- Source must be one of: Gulf News, Khaleej Times, The National, Bayut, DXB Interact, Dubai Land Department
-- Only include news from the last 48 hours
-- Return only the JSON array, nothing else`;
-
-async function loadNewsFeed() {
-  try {
-    const WORKER = 'https://sobha-market-intel.shubhambhaskar7898.workers.dev';
-    const r = await fetch(WORKER, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
-        max_tokens: 800,
-        system: NEWS_PROMPT,
-        tools: [{type: 'web_search_20250305', name: 'web_search'}],
-        messages: [{role: 'user', content: 'Get the top 5 Dubai real estate news headlines from today.'}]
-      })
-    });
-
-    if (!r.ok) throw new Error('fetch failed');
-    let data = await r.json();
-
-    // Follow tool use turns
-    let msgs = [{role: 'user', content: 'Get the top 5 Dubai real estate news headlines from today.'}];
-    while (data.stop_reason === 'tool_use') {
-      const toolBlocks = data.content.filter(b => b.type === 'tool_use');
-      msgs.push({role: 'assistant', content: data.content});
-      msgs.push({role: 'user', content: toolBlocks.map(tb => ({type: 'tool_result', tool_use_id: tb.id, content: 'Search completed'}))});
-      const r2 = await fetch(WORKER, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 800,
-          system: NEWS_PROMPT,
-          tools: [{type: 'web_search_20250305', name: 'web_search'}],
-          messages: msgs
-        })
-      });
-      data = await r2.json();
-    }
-
-    const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('').trim();
-    const match = text.match(/\[[\s\S]*\]/);
-    if (!match) throw new Error('no JSON');
-    const items = JSON.parse(match[0]);
-
-    renderNewsFeed(items);
-
-  } catch(e) {
-    renderNewsFeedError();
-  }
+ 
+/* UTILS */
+function show(id) {
+  const el = document.getElementById(id); if (!el) return;
+  if (id==='reportOutput') { el.classList.add('visible'); }
+  else if (id==='loadingState'||id==='errorState') { el.classList.add('visible'); }
+  else { el.style.display='block'; }
 }
-
-function renderNewsFeed(items) {
-  const feed = document.getElementById('newsFeed');
-  const status = document.getElementById('newsStatus');
-  if (!feed) return;
-
-  const dotColors = {press: 'var(--amber)', portal: 'var(--blue)', gov: 'var(--green)'};
-  const now = new Date().toLocaleTimeString('en-AE', {hour: '2-digit', minute: '2-digit'});
-
-  feed.innerHTML = items.map(item => `
-    <div class="news-item" onclick="fillQueryFromNews('${item.headline.replace(/'/g, "\\'")}')">
-      <span class="news-source-dot" style="background:${dotColors[item.sourceType] || 'var(--text-faint)'}"></span>
-      <div class="news-body">
-        <div class="news-headline">${item.headline}</div>
-        <div class="news-meta">
-          <span>${item.source}</span>
-          <span>·</span>
-          <span>${item.category}</span>
-        </div>
-      </div>
-    </div>`).join('');
-
-  if (status) { status.textContent = `Updated ${now}`; }
-  const dot = document.getElementById('newsDot');
-  if (dot) dot.style.background = 'var(--green)';
+function hide(id) {
+  const el = document.getElementById(id); if (!el) return;
+  if (id==='reportOutput') { el.classList.remove('visible'); }
+  else if (id==='loadingState'||id==='errorState') { el.classList.remove('visible'); }
+  else { el.style.display='none'; }
 }
-
-function renderNewsFeedError() {
-  const feed = document.getElementById('newsFeed');
-  const status = document.getElementById('newsStatus');
-  if (feed) feed.innerHTML = `<div style="padding:16px;text-align:center;font-size:12px;color:var(--text-faint);background:var(--white);border:1px solid var(--border-light);border-radius:8px">Headlines unavailable — check connection</div>`;
-  if (status) status.textContent = 'Unavailable';
-  const dot = document.getElementById('newsDot');
-  if (dot) dot.style.background = '#ccc';
-}
-
-function fillQueryFromNews(headline) {
-  const q = `Research this news story and provide a detailed analysis with implications for Sobha Realty: "${headline}"`;
-  ta.value = q;
-  ta.style.height = 'auto';
-  ta.style.height = Math.min(ta.scrollHeight, 180) + 'px';
-  document.getElementById('charCount').textContent = q.length + ' / 500';
-  ta.focus();
-  document.getElementById('composer').scrollIntoView({behavior: 'smooth', block: 'center'});
-}
-
-
+ 
+/* INIT */
 loadHistory();
 loadNewsFeed();
 </script>
 </body>
 </html>
+
+
